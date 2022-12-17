@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddActivity"
+    android:padding="30dp">
+
+    <EditText
+        android:id="@+id/name_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Name"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/address_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Address"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name_input" />
+
+    <EditText
+        android:id="@+id/handphone_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="No Handphone"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/address_input" />
+
+    <Button
+        android:id="@+id/save_button"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:text="Add"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/selectedImage" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="109dp"
+        android:layout_height="59dp"
+        android:layout_marginEnd="64dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/tvJK"
+        app:layout_constraintTop_toBottomOf="@+id/handphone_input">
+
+        <RadioButton
+            android:id="@+id/rbLakilaki"
+            android:layout_width="102dp"
+            android:layout_height="27dp"
+            android:text="Laki-laki" />
+
+        <RadioButton
+            android:id="@+id/rbPerempuan"
+            android:layout_width="wrap_content"
+            android:layout_height="29dp"
+            android:text="Perempuan" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tvJK"
+        android:layout_width="138dp"
+        android:layout_height="57dp"
+        android:text="Jenis Kelamin"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/handphone_input" />
+
+    <TextView
+        android:id="@+id/tvLocation"
+        android:layout_width="177dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="8dp"
+        android:text="Lokasi Pendaftaran"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tvJK"
+        app:layout_constraintTop_toBottomOf="@+id/tvJK" />
+
+    <TextView
+        android:id="@+id/tvLocation2"
+        android:layout_width="177dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="8dp"
+        android:text="Upload Foto :"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/button_location"
+        app:layout_constraintTop_toBottomOf="@+id/button_location" />
+
+    <Button
+        android:id="@+id/button_location"
+        android:layout_width="92dp"
+        android:layout_height="55dp"
+        android:text="Cek Lokasi"
+        android:textAllCaps="false"
+        app:layout_constraintStart_toStartOf="@+id/tvLocation"
+        app:layout_constraintTop_toBottomOf="@+id/tvLocation" />
+
+    <TextView
+        android:id="@+id/text_location"
+        android:layout_width="184dp"
+        android:layout_height="63dp"
+        android:hint="Hasil cek lokasi"
+        android:textAlignment="textEnd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/button_location"
+        app:layout_constraintTop_toBottomOf="@+id/tvLocation" />
+
+    <ImageView
+        android:id="@+id/selectedImage"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvLocation2"
+        app:layout_constraintTop_toBottomOf="@+id/text_location"
+        app:srcCompat="@drawable/ic_add_black" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
